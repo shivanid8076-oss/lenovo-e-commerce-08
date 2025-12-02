@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import heroImage from "@/assets/hero-laptop.jpg";
 import FuturisticParticles from "@/components/FuturisticParticles";
 import AnimatedLines from "@/components/AnimatedLines";
+import PageTransition from "@/components/PageTransition";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -18,7 +19,8 @@ const Home = () => {
   ];
 
   return (
-    <div>
+    <PageTransition>
+      <div>
       {/* Futuristic AI Hero Section */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         {/* Animated background layers */}
@@ -278,6 +280,7 @@ const Home = () => {
         </div>
       </section>
     </div>
+    </PageTransition>
   );
 };
 

@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Target, Users, Award, TrendingUp } from "lucide-react";
 import { motion } from "framer-motion";
+import PageTransition from "@/components/PageTransition";
 
 const About = () => {
   const values = [
@@ -27,8 +28,9 @@ const About = () => {
   ];
 
   return (
-    <div className="py-12">
-      <div className="container mx-auto px-4">
+    <PageTransition>
+      <div className="py-12">
+        <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -87,6 +89,7 @@ const About = () => {
         </motion.div>
       </div>
     </div>
+    </PageTransition>
   );
 };
 
