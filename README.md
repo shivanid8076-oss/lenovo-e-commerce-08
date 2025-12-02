@@ -2,7 +2,7 @@
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/9bb7d31f-470d-4370-bf5b-42a9d44b3d01
+**URL**: (https://bit.ly/buy-lenovo-laptop)
 
 ## How can I edit this code?
 
