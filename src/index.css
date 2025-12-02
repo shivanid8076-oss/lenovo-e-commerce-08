@@ -41,6 +41,10 @@ All colors MUST be HSL.
     --hero-gradient: linear-gradient(135deg, hsl(217 91% 40%), hsl(217 91% 60%));
     --card-shadow: 0 4px 20px -2px hsl(217 91% 40% / 0.1);
     --glow-shadow: 0 0 40px hsl(217 91% 50% / 0.3);
+    
+    /* Futuristic animations */
+    --neon-glow: 0 0 20px hsl(217 91% 60% / 0.5), 0 0 40px hsl(217 91% 60% / 0.3);
+    --pulse-animation: pulse-glow 3s ease-in-out infinite;
 
     --sidebar-background: 0 0% 98%;
 
@@ -119,3 +123,48 @@ All colors MUST be HSL.
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+/* Futuristic Animations */
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 1;
+    filter: brightness(1);
+  }
+  50% {
+    opacity: 0.8;
+    filter: brightness(1.2);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes drift {
+  0% {
+    transform: translate(0, 0);
+  }
+  33% {
+    transform: translate(30px, -30px);
+  }
+  66% {
+    transform: translate(-20px, 20px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px hsl(217 91% 60% / 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px hsl(217 91% 60% / 0.6), 0 0 60px hsl(217 91% 60% / 0.3);
+  }
+}
