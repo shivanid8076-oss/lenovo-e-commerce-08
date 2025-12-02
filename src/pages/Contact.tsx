@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import { motion } from "framer-motion";
 import { toast } from "@/hooks/use-toast";
+import PageTransition from "@/components/PageTransition";
 
 const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
@@ -24,8 +25,9 @@ const Contact = () => {
   ];
 
   return (
-    <div className="py-12">
-      <div className="container mx-auto px-4">
+    <PageTransition>
+      <div className="py-12">
+        <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -116,6 +118,7 @@ const Contact = () => {
         </motion.div>
       </div>
     </div>
+    </PageTransition>
   );
 };
 

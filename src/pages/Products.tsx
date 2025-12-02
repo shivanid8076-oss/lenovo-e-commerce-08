@@ -5,6 +5,7 @@ import { CheckCircle } from "lucide-react";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import PaymentModal from "@/components/PaymentModal";
+import PageTransition from "@/components/PageTransition";
 import ideapadImage from "@/assets/ideapad-slim.jpg";
 import thinkpadImage from "@/assets/thinkpad.jpg";
 import yogaImage from "@/assets/yoga-slim.jpg";
@@ -58,8 +59,9 @@ const Products = () => {
   ];
 
   return (
-    <div className="py-12">
-      <div className="container mx-auto px-4">
+    <PageTransition>
+      <div className="py-12">
+        <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -130,6 +132,7 @@ const Products = () => {
           ))}
         </div>
       </div>
+    </div>
 
       <PaymentModal
         isOpen={!!selectedProduct}
@@ -137,7 +140,7 @@ const Products = () => {
         productName={selectedProduct?.name || ""}
         price={selectedProduct?.price || ""}
       />
-    </div>
+    </PageTransition>
   );
 };
 

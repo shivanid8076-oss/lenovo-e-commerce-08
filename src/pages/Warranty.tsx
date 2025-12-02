@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Shield, Wrench, FileCheck, Clock } from "lucide-react";
 import { motion } from "framer-motion";
+import PageTransition from "@/components/PageTransition";
 
 const Warranty = () => {
   const warrantyFeatures = [
@@ -44,8 +45,9 @@ const Warranty = () => {
   ];
 
   return (
-    <div className="py-12">
-      <div className="container mx-auto px-4">
+    <PageTransition>
+      <div className="py-12">
+        <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -121,6 +123,7 @@ const Warranty = () => {
         </motion.div>
       </div>
     </div>
+    </PageTransition>
   );
 };
 
